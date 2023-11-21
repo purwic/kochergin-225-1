@@ -7,7 +7,92 @@
         mc:Ignorable="d"
         Title="Задание 2" Height="450" Width="800"
         Icon="/Icons/2.ico">
+    <Window.Resources>
+
+        <Style TargetType="Control" x:Key="Graphic Element">
+            <Setter Property="Height" Value="42" />
+            <Setter Property="Margin" Value="16" />
+            <Setter Property="Padding" Value="12" />
+        </Style>
+
+
+        <Style TargetType="Label" x:Key="Text" BasedOn="{StaticResource Graphic Element}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Candana" />
+        </Style>
+
+
+        <Style x:Key="Main Text" TargetType="Label" BasedOn="{StaticResource Text}">
+            <Setter Property="Foreground" Value="#243238"/>
+        </Style>
+
+
+        <Style x:Key="Sub Text" TargetType="Label" BasedOn="{StaticResource Text}">
+            <Setter Property="Foreground" Value="#78909c"/>
+        </Style>
+
+
+        <Style x:Key="Attention Text" TargetType="Label" BasedOn="{StaticResource Text}">
+            <Setter Property="Foreground" Value="#fff6a5"/>
+        </Style>
+
+
+
+    </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Content="Введите x₁: " Style="{StaticResource Main Text}"></Label>
+            <TextBox x:Name="X1" BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" TextChanged="X1_TextChanged"></TextBox>
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Content="Введите y₁: " Style="{StaticResource Main Text}"></Label>
+            <TextBox x:Name="Y1" BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" TextChanged="Y1_TextChanged"></TextBox>
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Content="Введите x₂: " Style="{StaticResource Main Text}"></Label>
+            <TextBox x:Name="X2" BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" TextChanged="X2_TextChanged"></TextBox>
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Content="Введите y₂: " Style="{StaticResource Main Text}"></Label>
+            <TextBox x:Name="Y2" BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" TextChanged="Y2_TextChanged"></TextBox>
+
+
+        </StackPanel>
         
+        
+        
+        
+        
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <Label Content="Расстояние:" Style="{StaticResource Sub Text}"></Label>
+                <Label x:Name="distance" Style="{StaticResource Main Text}">-</Label>
+
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

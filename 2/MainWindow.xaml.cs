@@ -24,5 +24,45 @@ namespace _2
         {
             InitializeComponent();
         }
+
+        double x1, x2, y1, y2;
+
+        private void X1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double l, s = 0.0;
+            try
+            {
+
+                x1 = double.Parse(X1.Text);
+
+                double distance_ = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2);
+
+                distance.Content = $"{distance_}";
+
+                
+
+            }
+
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        private void Y1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void X2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Y2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
