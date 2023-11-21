@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34500DB4-F40E-4228-BE0B-D3DFAA9BE39D}</ProjectGuid>
+    <ProjectGuid>{07C0CAFB-65E1-428A-881D-4A2D510F3F08}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>kochergin_225_1</RootNamespace>
-    <AssemblyName>kochergin-225-1</AssemblyName>
+    <RootNamespace>_2</RootNamespace>
+    <AssemblyName>2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -93,13 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\1.ico" />
-    <Resource Include="Icons\2.ico" />
-    <Resource Include="Icons\3.ico" />
-    <Resource Include="Icons\4.ico" />
-    <Resource Include="Icons\5.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
