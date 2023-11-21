@@ -24,5 +24,29 @@ namespace kochergin_225_1
         {
             InitializeComponent();
         }
+
+        private void R_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double l, s = 0.0;
+            try
+            {
+
+                double r = double.Parse(R.Text);
+
+
+                l = 2 * Math.PI * r;
+                s = Math.PI * Math.Pow(r, 2);
+
+                L.Content = $"{l}";
+                S.Content = $"{s}";
+
+            } 
+
+            catch (Exception)
+            {
+
+                
+            }
+        }
     }
 }

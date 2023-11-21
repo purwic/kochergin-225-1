@@ -55,7 +55,7 @@
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Label Content="Введите R: " Style="{StaticResource Main Text}"></Label>
-            <TextBox BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" ></TextBox>
+            <TextBox x:Name="R" BorderThickness="1" Width="100" BorderBrush="Black" Style="{StaticResource Graphic Element}" TextChanged="R_TextChanged"></TextBox>
 
 
 
