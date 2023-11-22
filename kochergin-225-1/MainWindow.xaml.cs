@@ -34,8 +34,8 @@ namespace kochergin_225_1
                 double r = double.Parse(R.Text);
 
 
-                l = 2 * Math.PI * r;
-                s = Math.PI * Math.Pow(r, 2);
+                l = 2 * 3.14 * r;
+                s = 3.14 * Math.Pow(r, 2);
 
                 L.Content = $"{l}";
                 S.Content = $"{s}";
@@ -45,7 +45,9 @@ namespace kochergin_225_1
             catch (Exception)
             {
 
-                
+                L.Content = "-";
+                S.Content = "-";
+
             }
         }
     }
