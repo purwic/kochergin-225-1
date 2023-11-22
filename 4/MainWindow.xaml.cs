@@ -24,5 +24,33 @@ namespace _4
         {
             InitializeComponent();
         }
+
+        private void X_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                double x = double.Parse(X.Text);
+
+                if (x > 0)
+                {
+                    double b = Math.Pow(10, x + Math.Log(x));
+
+                    double a = 1.0 / Math.Cos(x) + Math.Log(Math.Abs(Math.Tan(x / 2))) + Math.Pow(b, 2);
+
+                    A.Content = $"{a}";
+                }
+
+                else
+                {
+                    A.Content = "вне области допуст. знач.";
+                }
+
+            }
+
+            catch (Exception)
+            {
+                A.Content = "-";
+            }
+        }
     }
 }
