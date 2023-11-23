@@ -25,8 +25,11 @@ namespace _5
             InitializeComponent();
         }
 
-        private void A1_TextChanged(object sender, TextChangedEventArgs e)
+        
+
+        private void compute()
         {
+
             try
             {
                 double a1 = double.Parse(A1.Text);
@@ -41,8 +44,8 @@ namespace _5
                     X.Content = "не сущ. или не единств.";
                     Y.Content = "не сущ. или не единств.";
 
-                } 
-                
+                }
+
                 else
                 {
                     double D = a1 * b2 - a2 * b1;
@@ -57,6 +60,7 @@ namespace _5
 
 
             }
+
             catch (Exception)
             {
 
@@ -64,30 +68,44 @@ namespace _5
                 Y.Content = "-";
 
             }
+
+        }
+
+
+
+        private void A1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            compute();
+
         }
 
         private void A2_TextChanged(object sender, TextChangedEventArgs e)
         {
+            compute();
 
         }
 
         private void B1_TextChanged(object sender, TextChangedEventArgs e)
         {
+            compute();
 
         }
 
         private void B2_TextChanged(object sender, TextChangedEventArgs e)
         {
+            compute();
 
         }
 
         private void C1_TextChanged(object sender, TextChangedEventArgs e)
         {
+            compute();
 
         }
 
         private void C2_TextChanged(object sender, TextChangedEventArgs e)
         {
+            compute();
 
         }
     }
